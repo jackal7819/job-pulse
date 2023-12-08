@@ -1,7 +1,6 @@
 *,
 ::after,
 ::before {
-	font-family: 'Fira Sans', sans-serif;
 	scroll-behavior: smooth;
 	box-sizing: border-box;
 }
@@ -46,8 +45,8 @@ html {
 	--green-dark: #0f5132;
 
 	/* fonts  */
-	--headingFont: 'Roboto Condensed', Sans-Serif;
-	--bodyFont: 'Cabin', Sans-Serif;
+	--headingFont: 'Railway', sans-serif;
+	--bodyFont: 'Fira-sans', sans-serif;
 	--small-text: 0.875rem;
 	--extra-small-text: 0.7em;
 	/* rest of the vars */
@@ -325,4 +324,16 @@ ul {
 
 .Toastify__toast {
 	text-transform: capitalize;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.navbar_title {
+	margin-bottom: 0;
+	font-weight: 800;
+	color: var(--primary-500);
 }
