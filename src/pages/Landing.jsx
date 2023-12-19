@@ -1,6 +1,7 @@
 import main from '../assets/main.svg';
 import styled from 'styled-components';
 import Logo from '../components/Logo';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
 	return (
@@ -20,7 +21,7 @@ const Landing = () => {
 						user-friendly features and personalized insights. Get
 						started today for a seamless job search experience!
 					</p>
-					<button className='btn-hero btn'>Login/Register</button>
+					<Link to='/register' className='btn-hero btn'>Login/Register</Link>
 				</div>
 				<img src={main} alt='job hunt' className='img main-img' />
 			</div>
