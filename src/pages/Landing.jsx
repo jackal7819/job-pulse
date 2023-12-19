@@ -1,13 +1,12 @@
-import logo from '../assets/heart.svg';
 import main from '../assets/main.svg';
 import styled from 'styled-components';
+import Logo from '../components/Logo';
 
 const Landing = () => {
 	return (
 		<Wrapper>
 			<nav>
-				<img src={logo} alt='jobpulse logo' className='logo' />
-				<h4>JobPulse</h4>
+				<Logo />
 			</nav>
 			<div className='container page'>
 				<div className='info'>
@@ -30,15 +29,6 @@ const Landing = () => {
 };
 
 const Wrapper = styled.main`
-	nav {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		width: var(--fluid-width);
-		max-width: var(--max-width);
-		margin: 0 auto;
-		height: var(--nav-height);
-	}
 	h4 {
 		margin-bottom: 0;
 		font-weight: 800;
@@ -48,7 +38,7 @@ const Wrapper = styled.main`
 		min-height: calc(100vh - var(--nav-height));
 		display: grid;
 		align-items: center;
-        margin-top: -3rem;
+		margin-top: -3rem;
 	}
 	h1 {
 		font-weight: 700;
