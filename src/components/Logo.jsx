@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 	align-items: center;
 	gap: 1rem;
 	width: var(--fluid-width);
-	max-width: 200px;
+	max-width: 190px;
 	margin: 0 auto;
 	height: var(--nav-height);
 `;
