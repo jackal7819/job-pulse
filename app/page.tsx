@@ -7,10 +7,10 @@ import Link from 'next/link';
 export default function Home() {
 	return (
 		<main>
-			<header className='max-w-6xl px-4 py-6 mx-auto sm:px-8'>
+			<header className='h-[88px] max-w-6xl px-4 py-6 mx-auto sm:px-8'>
 				<Logo />
 			</header>
-			<section className='grid h-screen max-w-6xl px-4 py-6 mx-auto -mt-20 sm:px-8 lg:grid-cols-[1fr,400px] items-center'>
+			<section className='grid h-screen max-w-6xl px-4 py-6 mx-auto -mt-[88px] sm:px-8 lg:grid-cols-[1fr,400px] items-center'>
 				<div>
 					<h1 className='text-4xl font-bold capitalize md:text-7xl'>
 						job <span className='text-primary'>tracking</span> app
