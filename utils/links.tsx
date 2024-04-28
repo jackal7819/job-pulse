@@ -8,7 +8,7 @@ type NavLink = {
 
 export const links: NavLink[] = [
 	{
-		label: 'add jobs',
+		label: 'add job',
 		href: '/add-job',
 		icon: <Layers />,
 	},
