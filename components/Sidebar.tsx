@@ -12,7 +12,7 @@ export default function Sidebar() {
 
 	return (
 		<aside className='h-full px-8 py-4 bg-muted'>
-			<Logo />
+			<div className='flex justify-center'><Logo /></div>
 			<div className='flex flex-col mt-20 gap-y-4'>
 				{links.map((link) => (
 					<Button
@@ -22,10 +22,10 @@ export default function Sidebar() {
 					>
 						<Link
 							href={link.href}
-							className='flex items-center w-full text-lg gap-x-2'
+							className='flex items-center text-lg gap-x-2'
 						>
 							{link.icon}{' '}
-							<span className='mr-auto capitalize'>{link.label}</span>
+							<span className='capitalize'>{link.label}</span>
 						</Link>
 					</Button>
 				))}

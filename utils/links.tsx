@@ -13,12 +13,12 @@ export const links: NavLink[] = [
 		icon: <Layers />,
 	},
 	{
-		label: 'jobs',
+		label: 'my jobs',
 		href: '/jobs',
 		icon: <AppWindow />,
 	},
 	{
-		label: 'stats',
+		label: 'my stats',
 		href: '/stats',
 		icon: <AreaChart />,
 	},
