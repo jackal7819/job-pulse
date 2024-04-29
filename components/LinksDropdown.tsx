@@ -25,7 +25,7 @@ export default function LinksDropdown() {
 				align='start'
 				sideOffset={25}
 			>
-				<DropdownMenuLabel className='text-base font-normal'>
+				<DropdownMenuLabel className='text-base font-normal cursor-default'>
 					Dashboard
 				</DropdownMenuLabel>
 				<DropdownMenuSeparator />

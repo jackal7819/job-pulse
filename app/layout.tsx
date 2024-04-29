@@ -1,10 +1,9 @@
 import './globals.css';
 
 import { ClerkProvider } from '@clerk/nextjs';
-import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] });
+import Providers from './providers';
 
 export const metadata: Metadata = {
 	title: 'JobPulse',
@@ -19,7 +18,9 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang='en'>
-				<body>{children}</body>
+				<body>
+					<Providers>{children}</Providers>
+				</body>
 			</html>
 		</ClerkProvider>
 	);
