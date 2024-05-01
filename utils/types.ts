@@ -2,14 +2,14 @@ import * as z from 'zod';
 
 export type JobType = {
 	id: string;
-	createdAt: string;
-	updateAt: string;
+	createdAt: Date;
+	updatedAt: Date;
 	clerkId: string;
 	position: string;
 	company: string;
 	location: string;
-	status: JobStatus;
-	mode: JobMode;
+	status: string;
+	mode: string;
 };
 
 export enum JobStatus {
