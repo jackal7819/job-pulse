@@ -34,7 +34,7 @@ export default function JobCard({ job }: JobCardProps) {
 				<CardDescription>{job.company}</CardDescription>
 			</CardHeader>
 			<Separator />
-			<CardContent className='grid grid-cols-2 gap-4 mt-4'>
+			<CardContent className='grid grid-cols-2 gap-4 mt-4 capitalize'>
 				<JobInfo icon={<Briefcase />} text={job.mode} />
 				<JobInfo icon={<MapPin />} text={job.location} />
 				<JobInfo icon={<CalendarDays />} text={date} />
@@ -49,7 +49,7 @@ export default function JobCard({ job }: JobCardProps) {
 				<Button asChild size='sm'>
 					<Link href={`/jobs/${job.id}`}>Edit</Link>
 				</Button>
-				<DeleteJobBtn />
+				<DeleteJobBtn id={job.id} />
 			</CardFooter>
 		</Card>
 	);
