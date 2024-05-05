@@ -1,10 +1,28 @@
-import { getStatsAction } from '@/utils/actions';
+import ChartsContainer from '@/components/ChartsContainer';
+import StatsContainer from '@/components/StatsContainer';
+import {
+	HydrationBoundary,
+	QueryClient,
+	dehydrate,
+} from '@tanstack/react-query';
+import { getChartsDataAction, getStatsAction } from '@/utils/actions';
 
 export default async function StatsPage() {
-	const stats = await getStatsAction();
+	const queryClient = new QueryClient();
+
+	await queryClient.prefetchQuery({
+		queryKey: ['stats'],
+		queryFn: () => getStatsAction(),
+	});
+
+	await queryClient.prefetchQuery({
+		queryKey: ['charts'],
+		queryFn: () => getChartsDataAction(),
+	});
 	return (
-		<div>
-			<h1>Stats</h1>
-		</div>
+		<HydrationBoundary state={dehydrate(queryClient)}>
+			<StatsContainer />
+			<ChartsContainer />
+		</HydrationBoundary>
 	);
 }
