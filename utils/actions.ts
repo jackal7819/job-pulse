@@ -190,3 +190,39 @@ export async function getStatsAction(): Promise<{
 		redirect('/jobs');
 	}
 }
+
+export async function getChartsDataAction(): Promise<
+	Array<{ date: string; count: number }>
+> {
+	const userId = authenticateAndRedirect();
+	const sixMonthsAgo = dayjs().subtract(6, 'month').toDate();
+	try {
+		const jobs = await prisma.job.findMany({
+			where: {
+				clerkId: userId,
+				createdAt: {
+					gte: sixMonthsAgo,
+				},
+			},
+			orderBy: {
+				createdAt: 'asc',
+			},
+		});
+
+		let applicationsPerMonth = jobs.reduce((acc, curr) => {
+			const date = dayjs(curr.createdAt).format('MMM YY');
+			const existingEntry = acc.find((entry) => entry.date === date);
+			if (existingEntry) {
+				existingEntry.count++;
+			} else {
+				acc.push({ date, count: 1 });
+			}
+			return acc;
+		}, [] as Array<{ date: string; count: number }>);
+
+		return applicationsPerMonth;
+	} catch (error) {
+		console.log(error);
+		redirect('/jobs');
+	}
+}
