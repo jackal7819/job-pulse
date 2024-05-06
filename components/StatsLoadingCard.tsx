@@ -3,15 +3,10 @@ import { Skeleton } from './ui/skeleton';
 
 export default function StatsLoadingCard() {
 	return (
-		<Card className='w-[330px] h-[88px]'>
-			<CardHeader className='flex flex-row items-center justify-between'>
-				<div className='flex items-center space-x-4'>
-					<Skeleton className='w-12 h-12 rounded-full' />
-					<div className='space-y-2'>
-						<Skeleton className='h-4 w-[150px]' />
-						<Skeleton className='h-4 w-[100px]' />
-					</div>
-				</div>
+		<Card className='w-full h-[88px] flex items-center'>
+			<CardHeader className='flex flex-row items-center justify-between w-full'>
+				<Skeleton className='h-6 w-44' />
+				<Skeleton className='rounded-full size-10' />
 			</CardHeader>
 		</Card>
 	);

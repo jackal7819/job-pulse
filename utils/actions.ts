@@ -54,6 +54,7 @@ export async function getAllJobsAction({
 	page: number;
 	totalPages: number;
 }> {
+	await new Promise((resolve) => setTimeout(resolve, 5000));
 	const userId = authenticateAndRedirect();
 	try {
 		let whereClause: Prisma.JobWhereInput = {
@@ -162,6 +163,7 @@ export async function getStatsAction(): Promise<{
 	interview: number;
 	declined: number;
 }> {
+	await new Promise((resolve) => setTimeout(resolve, 5000));
 	const userId = authenticateAndRedirect();
 	try {
 		const stats = await prisma.job.groupBy({
