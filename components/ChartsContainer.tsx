@@ -1,7 +1,43 @@
-import React from 'react'
+'use client';
+
+import {
+	Bar,
+	BarChart,
+	CartesianGrid,
+	ResponsiveContainer,
+	Tooltip,
+	XAxis,
+	YAxis,
+} from 'recharts';
+import { getChartsDataAction } from '@/utils/actions';
+import { useQuery } from '@tanstack/react-query';
 
 export default function ChartsContainer() {
+	const { data } = useQuery({
+		queryKey: ['charts'],
+		queryFn: () => getChartsDataAction(),
+	});
+
+	if (!data || data.length < 1) return null;
+
 	return (
-		<div>ChartsContainer</div>
-	)
+		<section className='mt-16'>
+			<h1 className='text-4xl font-semibold text-center'>
+				Monthly Applications
+			</h1>
+			<ResponsiveContainer width='100%' height={300}>
+				<BarChart data={data} margin={{ top: 50, left: -30 }}>
+					<CartesianGrid strokeDasharray='3 3' />
+					<XAxis dataKey='date' />
+					<YAxis allowDecimals={false} />
+					<Tooltip />
+					<Bar
+						dataKey='count'
+						fill='hsl(24.6,95%,53.1%)'
+						barSize={75}
+					/>
+				</BarChart>
+			</ResponsiveContainer>
+		</section>
+	);
 }
