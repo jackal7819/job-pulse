@@ -3,6 +3,8 @@
 import { getAllJobsAction } from '@/utils/actions';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
+
+import ButtonContainer from './ButtonContainer';
 import JobCard from './JobCard';
 
 export default function JobList() {
@@ -19,6 +21,9 @@ export default function JobList() {
 	});
 
 	const jobs = data?.jobs || [];
+	const count = data?.count || 0;
+	const page = data?.page || 1;
+	const totalPages = data?.totalPages || 0;
 
 	if (isPending) {
 		return (
@@ -38,8 +43,21 @@ export default function JobList() {
 
 	return (
 		<>
+			<div className='flex items-center justify-between mb-8'>
+				<h2 className='text-xl font-semibold capitalize'>
+					{count} jobs found
+				</h2>
+				{totalPages > 1 && (
+					<ButtonContainer
+						currentPage={page}
+						totalPages={totalPages}
+					/>
+				)}
+			</div>
 			<div className='grid gap-8 md:grid-cols-2'>
-				{jobs.map((job) => <JobCard key={job.id} job={job} />)}
+				{jobs.map((job) => (
+					<JobCard key={job.id} job={job} />
+				))}
 			</div>
 		</>
 	);
