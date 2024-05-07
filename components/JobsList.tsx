@@ -4,7 +4,7 @@ import { getAllJobsAction } from '@/utils/actions';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
 
-import ButtonContainer from './ButtonContainer';
+import ComplexButtonContainer from './ComplexButtonContainer';
 import JobCard from './JobCard';
 
 export default function JobList() {
@@ -43,12 +43,12 @@ export default function JobList() {
 
 	return (
 		<>
-			<div className='flex items-center justify-between mb-8'>
+			<div className='flex flex-col items-center justify-between gap-8 mb-8 md:flex-row'>
 				<h2 className='text-xl font-semibold capitalize'>
 					{count} jobs found
 				</h2>
 				{totalPages > 1 && (
-					<ButtonContainer
+					<ComplexButtonContainer
 						currentPage={page}
 						totalPages={totalPages}
 					/>
