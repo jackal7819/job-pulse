@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Job Pulse
 
-## Getting Started
+## Project Description
 
-First, run the development server:
+Job Pulse is a web application for managing the job search process. The application allows users to add new jobs, track the status of applications (pending, interview, declined), view charts and analytics of their applications, and manage their job list.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**: Users can sign in to their account to access all application features.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Application Status Tracking**: Users can see the total number of jobs with different statuses (pending, interview, declined) and manage them.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Adding New Jobs**: Users can add information about new jobs, including position, company, date, job type, location, and other details.
 
-## Learn More
+- **Viewing Job List**: Users can view a list of all jobs in card format with brief descriptions, including position, company, date, job type, and location. They can also edit and delete jobs as needed.
 
-To learn more about Next.js, take a look at the following resources:
+- **Pagination**: Jobs are displayed using pagination for easy navigation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Dark and Light Theme**: Users can choose between dark and light themes for ease of use.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies
 
-## Deploy on Vercel
+- **Next.js**: React framework for building web applications.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Tailwind CSS**: Convenient CSS library for styling the user interface.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Prisma**: Object-Relational Mapping (ORM) for interacting with the database.
+
+- **React Hook Form**: Library for managing forms in React.
+
+- **Recharts**: Library for creating interactive charts in React.
+
+- **Zod**: Library for data validation.
+
+- **Clerk**: Library for adding authentication and authorization to Next.js applications.
+
+- **shadcn-ui**: Library for adding components to your project.
+
+- **@tanstack/react-query**: Library for state management in React.
+
+- **clsx**: Utility for dynamically assigning classes in React.
+
+- **dayjs**: Library for working with dates and times.
+
+- **lucide-react**: Collection of SVG icons for React.
