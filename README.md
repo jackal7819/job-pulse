@@ -22,6 +22,10 @@ Job Pulse is a web application for managing the job search process. The applicat
 
 - **Next.js**: React framework for building web applications.
 
+- **React**: JavaScript library for building user interfaces.
+
+- **TypeScript**: Language for writing JavaScript code.
+
 - **Tailwind CSS**: Convenient CSS library for styling the user interface.
 
 - **Prisma**: Object-Relational Mapping (ORM) for interacting with the database.
@@ -36,7 +40,7 @@ Job Pulse is a web application for managing the job search process. The applicat
 
 - **shadcn-ui**: Library for adding components to your project.
 
-- **@tanstack/react-query**: Library for state management in React.
+- **Tanstack**: Library for state management in React.
 
 - **clsx**: Utility for dynamically assigning classes in React.
 
