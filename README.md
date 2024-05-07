@@ -38,12 +38,12 @@ Job Pulse is a web application for managing the job search process. The applicat
 
 - **Clerk**: Library for adding authentication and authorization to Next.js applications.
 
-- **shadcn-ui**: Library for adding components to your project.
+- **Shadcn-ui**: Library for adding components to your project.
 
 - **Tanstack**: Library for state management in React.
 
-- **clsx**: Utility for dynamically assigning classes in React.
+- **Clsx**: Utility for dynamically assigning classes in React.
 
-- **dayjs**: Library for working with dates and times.
+- **Dayjs**: Library for working with dates and times.
 
-- **lucide-react**: Collection of SVG icons for React.
+- **Lucide-react**: Collection of SVG icons for React.
